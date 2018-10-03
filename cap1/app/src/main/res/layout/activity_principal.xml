@@ -9,7 +9,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:padding="20dp"
-        app:srcCompat="@drawable/fly_on" />
+        app:srcCompat="@drawable/flyon" />
 
     <TextView
         android:id="@+id/texto"
