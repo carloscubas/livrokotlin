@@ -26,31 +26,27 @@ class SmsActivity : AppCompatActivity() {
         setContentView(R.layout.activity_sms)
         setSupportActionBar(toolbar)
 
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
-
         setupPermissions()
         configureReceiver()
     }
 
+    override fun onDestroy() {
+        super.onDestroy()
+        unregisterReceiver(receiver)
+    }
+
     private fun configureReceiver() {
         val filter = IntentFilter()
-        //filter.addAction("br.aula.agenda.broadcast.SMSreceiver")
         filter.addAction("android.provider.Telephony.SMS_RECEIVED")
         receiver = SMSReceiver()
         registerReceiver(receiver, filter)
     }
 
     private fun setupPermissions() {
-
-        ActivityCompat.requestPermissions(this,
-                list.toTypedArray(), MY_PERMISSIONS_REQUEST_SMS_RECEIVE);
         val permission = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_SMS)
         if (permission != PackageManager.GET_SERVICES) {
-            Log.i("monitorameno", "Permission to record denied")
+            Log.i("monitorameno", "Permissão para ler SMS bloqueado")
         }
     }
 
