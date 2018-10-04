@@ -8,7 +8,7 @@ import android.widget.ImageView
 import android.widget.TextView
 import android.widget.Toast
 
-class PrincipalActivity : AppCompatActivity() {
+class ModoAviaoActivity : AppCompatActivity() {
 
     var receiver: BroadcastReceiver? = null
     var texto: TextView? = null
