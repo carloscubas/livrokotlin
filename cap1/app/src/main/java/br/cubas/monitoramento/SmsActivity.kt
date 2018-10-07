@@ -9,9 +9,12 @@ import android.support.design.widget.Snackbar
 import android.support.v4.app.ActivityCompat
 import android.support.v4.content.ContextCompat
 import android.support.v7.app.AppCompatActivity
+import android.telephony.SmsMessage
 import android.util.Log
+import android.util.Log.WARN
 
 import kotlinx.android.synthetic.main.activity_sms.*
+import java.util.logging.Logger
 
 class SmsActivity : AppCompatActivity() {
 
@@ -24,15 +27,16 @@ class SmsActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_sms)
-        setSupportActionBar(toolbar)
-
-        fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
-        }
 
         setupPermissions()
         configureReceiver()
+    }
+
+    override fun onRequestPermissionsResult(requestCode: Int, permissions: Array<String>, grantResults: IntArray) {
+        super.onRequestPermissionsResult(requestCode, permissions, grantResults)
+        if (requestCode == MY_PERMISSIONS_REQUEST_SMS_RECEIVE) {
+            Logger.getLogger("monitoramento").info("Permission RECEIVE SMS")
+        }
     }
 
     private fun configureReceiver() {
@@ -49,8 +53,13 @@ class SmsActivity : AppCompatActivity() {
         val permission = ContextCompat.checkSelfPermission(this,
                 Manifest.permission.READ_SMS)
         if (permission != PackageManager.GET_SERVICES) {
-            Log.i("monitorameno", "Permission to record denied")
+            Log.i("monitorameno", "Permissão não liberada")
         }
+    }
+
+    override fun onDestroy() {
+        super.onDestroy()
+        unregisterReceiver(receiver)
     }
 
 }
