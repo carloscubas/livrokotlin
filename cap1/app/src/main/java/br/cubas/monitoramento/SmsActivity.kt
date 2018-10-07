@@ -37,7 +37,6 @@ class SmsActivity : AppCompatActivity() {
 
     private fun configureReceiver() {
         val filter = IntentFilter()
-        //filter.addAction("br.aula.agenda.broadcast.SMSreceiver")
         filter.addAction("android.provider.Telephony.SMS_RECEIVED")
         receiver = SMSReceiver()
         registerReceiver(receiver, filter)
