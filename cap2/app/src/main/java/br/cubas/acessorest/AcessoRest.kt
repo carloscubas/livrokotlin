@@ -1,44 +1,58 @@
 package br.cubas.acessorest
 
 import android.net.Uri
+import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity;
-import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.StaggeredGridLayoutManager
-import android.util.Log
-
 import kotlinx.android.synthetic.main.activity_acesso_rest.*
+import android.content.Context
+import android.support.v7.widget.RecyclerView
+import android.view.View
+import android.widget.ProgressBar
 
 class AcessoRest : AppCompatActivity() {
 
-    var listMovies : List<Movie>? = null
+    var progressBarWaiting: ProgressBar? = null
+    var recyclerView: RecyclerView?= null
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_acesso_rest)
 
-        var recyclerView = movie_list_recyclerview
-        recyclerView.adapter = MovieListAdapter(listMovies, this)
+        recyclerView = movie_list_recyclerview
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
-        recyclerView.layoutManager = layoutManager
-        AcessoRest.LensoServidor().start()
+        recyclerView?.layoutManager = layoutManager
+
+        progressBarWaiting = progressBar1
+
+        buscaFilmes(this).execute();
     }
 
-    class LensoServidor() : Thread() {
-        override fun run() {
+    inner class buscaFilmes(context: Context) : AsyncTask<Void, Void, String>() {
+
+        private val context: Context
+
+        init {
+            this.context = context.applicationContext
+        }
+
+        override fun onPreExecute() {
+            super.onPreExecute()
+            progressBarWaiting?.visibility = View.VISIBLE
+        }
+
+        override fun doInBackground(vararg params: Void?): String? {
             val url = Uri.parse(Constants.URLSERVIDOR).toString()
             val contents = Util.acessar(url)
-            //listMovies = Util.movieConverter(contents)
+            return contents
         }
-    }
 
-    private fun movies(): List<Movie> {
-        return listOf(
-            Movie("Era uma vez no Oeste",
-                    "2012", "movie", "sem poster"),
-            Movie("Onde os Fracos Não Tem Vez ",
-                    "2013", "movie", "sem poster"),
-            Movie("The Rocky Horror Picture Show",
-                    "2014", "movie", "sem poster"))
+        override fun onPostExecute(result: String?) {
+            super.onPostExecute(result)
+            var listMovies = Util.movieConverter(result)
+            recyclerView?.adapter = MovieListAdapter(listMovies, context)
+            progressBarWaiting?.visibility = View.INVISIBLE
+        }
     }
 }
