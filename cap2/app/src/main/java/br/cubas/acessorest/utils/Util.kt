@@ -1,10 +1,11 @@
-package br.cubas.acessorest
+package br.cubas.acessorest.utils
 
-import android.util.Log
+import br.cubas.acessorest.models.Movie
+import br.cubas.acessorest.models.MovieData
 import com.beust.klaxon.Klaxon
+import org.json.JSONException
 import java.net.URL
 import java.util.*
-import org.json.JSONException
 
 object Util {
 
@@ -21,7 +22,7 @@ object Util {
     @Throws(JSONException::class)
     fun movieConverter(contents: String?): List<Movie>? {
         val movieData = contents?.let { Klaxon().parse<MovieData>(it) }
-        return movieData?.search
+        return movieData?.Search
     }
 
 }

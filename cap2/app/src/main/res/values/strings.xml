@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AcessoRest</string>
     <string name="title_activity_acesso_rest">AcessoRest</string>
+    <string name="title_activity_acesso_rest_retrofitt">AcessoRestRetrofitt</string>
 </resources>

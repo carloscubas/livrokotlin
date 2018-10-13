@@ -10,6 +10,8 @@ import android.content.Context
 import android.support.v7.widget.RecyclerView
 import android.view.View
 import android.widget.ProgressBar
+import br.cubas.acessorest.utils.Constants
+import br.cubas.acessorest.utils.Util
 
 class AcessoRest : AppCompatActivity() {
 
@@ -24,8 +26,11 @@ class AcessoRest : AppCompatActivity() {
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerView?.layoutManager = layoutManager
 
-        progressBarWaiting = progressBar1
+        progressBarWaiting = progressBarLayout
+    }
 
+    override fun onResume() {
+        super.onResume()
         buscaFilmes(this).execute();
     }
 
@@ -43,7 +48,8 @@ class AcessoRest : AppCompatActivity() {
         }
 
         override fun doInBackground(vararg params: Void?): String? {
-            val url = Uri.parse(Constants.URLSERVIDOR).toString()
+            val url =
+                    Uri.parse(Constants.URL_SERVIDOR + "/?apikey=ed5a2df5&type=movie&r=json&s=brazil&page=1").toString()
             val contents = Util.acessar(url)
             return contents
         }
@@ -55,4 +61,5 @@ class AcessoRest : AppCompatActivity() {
             progressBarWaiting?.visibility = View.INVISIBLE
         }
     }
+
 }
