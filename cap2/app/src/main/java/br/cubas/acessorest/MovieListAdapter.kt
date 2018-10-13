@@ -7,6 +7,7 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.cubas.acessorest.models.Movie
+import com.koushikdutta.ion.Ion
 import kotlinx.android.synthetic.main.move_item.view.*
 
 class MovieListAdapter(private val movies: List<Movie>?,
@@ -30,11 +31,19 @@ class MovieListAdapter(private val movies: List<Movie>?,
     }
 
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
+
         fun bindView(movie: Movie) {
             val title = itemView.movie_item_title
             val type = itemView.movie_item_type
+            val image = itemView.move_image
             title.text = movie.Title
             type.text = movie.Type
+            Ion.with(image)
+                    .centerCrop()
+                    .placeholder(R.drawable.place_holder)
+                    .error(R.drawable.error)
+                    .animateIn(R.anim.fade_in)
+                    .load(movie.Poster)
         }
     }
 

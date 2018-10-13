@@ -38,6 +38,7 @@ dependencies {
     implementation "org.jetbrains.anko:anko-design:$anko_version"
     implementation "com.squareup.retrofit2:retrofit:$retrofit2_version"
     implementation "com.squareup.retrofit2:converter-gson:$retrofit2_version"
+    implementation "com.koushikdutta.ion:ion:$ion_version"
     implementation 'com.google.code.gson:gson:2.8.5'
 
     testImplementation 'junit:junit:4.12'
