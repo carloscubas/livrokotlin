@@ -16,23 +16,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="a9bcfcb8-3ec8-49d0-91a9-7914ab1b6b67" name="Default" comment="">
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/AcessoRestRetrofitt.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/api/ApiClient.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/api/ApiService.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/utils/Constants.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/caches/build_file_checksums.ser" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/app/build.gradle" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/AndroidManifest.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/AcessoRest.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/AcessoRest.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/Constants.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/Movie.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/models/Movie.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/MovieData.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/models/MovieData.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/MovieListAdapter.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/MovieListAdapter.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/Util.kt" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/utils/Util.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/layout/activity_acesso_rest.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/layout/activity_acesso_rest.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/app/src/main/res/values/strings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/build.gradle" beforeDir="false" afterPath="$PROJECT_DIR$/build.gradle" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -58,11 +42,23 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="375">
-      <file leaf-file-name="AcessoRestRetrofitt.kt" pinned="false" current-in-tab="true">
+      <file leaf-file-name="AcessoRest.kt" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/AcessoRest.kt">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="332">
+              <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+              <folding>
+                <element signature="e#29#503#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AcessoRestRetrofitt.kt" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/AcessoRestRetrofitt.kt">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="120">
-              <caret line="43" selection-start-line="43" selection-end-line="43" />
+            <state relative-caret-position="495">
+              <caret line="48" column="16" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="16" />
             </state>
           </provider>
         </entry>
@@ -2459,7 +2455,6 @@
         <option value="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/Constants.kt" />
         <option value="$PROJECT_DIR$/app/src/main/res/layout/activity_acesso_rest.xml" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/utils/Constants.kt" />
-        <option value="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/AcessoRest.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/utils/Util.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/MovieListAdapter.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/api/ApiService.kt" />
@@ -2467,6 +2462,7 @@
         <option value="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/models/Movie.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/models/MovieData.kt" />
         <option value="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/AcessoRestRetrofitt.kt" />
+        <option value="$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/AcessoRest.kt" />
       </list>
     </option>
   </component>
@@ -2565,27 +2561,6 @@
               <item name="app" type="feadf853:AndroidModuleNode" />
               <item name="java" type="edd41e36:AndroidSourceTypeNode" />
               <item name="acessorest" type="cbb59c9e:AndroidPsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cap2" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="acessorest" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="api" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cap2" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="acessorest" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="models" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="cap2" type="1abcf292:AndroidViewProjectNode" />
-              <item name="app" type="feadf853:AndroidModuleNode" />
-              <item name="java" type="edd41e36:AndroidSourceTypeNode" />
-              <item name="acessorest" type="cbb59c9e:AndroidPsiDirectoryNode" />
-              <item name="utils" type="462c0819:PsiDirectoryNode" />
             </path>
             <path>
               <item name="cap2" type="1abcf292:AndroidViewProjectNode" />
@@ -2719,7 +2694,7 @@
         <option name="STARTUP_CPU_PROFILING_CONFIGURATION_NAME" value="Sampled (Java)" />
       </Profilers>
       <option name="DEEP_LINK" value="" />
-      <option name="ACTIVITY_CLASS" value="br.cubas.acessorest.AcessoRestRetrofitt" />
+      <option name="ACTIVITY_CLASS" value="br.cubas.acessorest.AcessoRest" />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
@@ -2811,18 +2786,18 @@
       <window_info anchor="right" id="Preview" order="3" weight="0.21498372" />
       <window_info anchor="bottom" id="Run" order="2" />
       <window_info anchor="bottom" id="Version Control" order="7" />
-      <window_info anchor="bottom" id="Terminal" order="7" weight="0.07704918" />
+      <window_info anchor="bottom" id="Terminal" order="7" visible="true" weight="0.062295083" />
       <window_info anchor="bottom" id="Logcat" order="7" weight="0.3442623" />
       <window_info id="Captures" order="2" weight="0.25" />
       <window_info id="Capture Tool" order="2" />
       <window_info id="Designer" order="2" />
-      <window_info content_ui="combo" id="Project" order="0" visible="true" weight="0.23208469" />
+      <window_info active="true" content_ui="combo" id="Project" order="0" visible="true" weight="0.22557004" />
       <window_info anchor="bottom" id="Build" order="7" weight="0.17868853" />
       <window_info anchor="right" id="Gradle" order="3" />
       <window_info id="Structure" order="1" side_tool="true" weight="0.25" />
       <window_info anchor="right" id="Device File Explorer" order="3" side_tool="true" />
       <window_info anchor="right" id="Theme Preview" order="3" />
-      <window_info active="true" anchor="bottom" id="Debug" order="3" visible="true" weight="0.1704918" />
+      <window_info anchor="bottom" id="Debug" order="3" weight="0.5344262" />
       <window_info id="Favorites" order="2" side_tool="true" />
       <window_info anchor="right" id="Commander" internal_type="SLIDING" order="0" type="SLIDING" weight="0.4" />
       <window_info anchor="bottom" id="Inspection" order="5" weight="0.4" />
@@ -2838,15 +2813,7 @@
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
-      <breakpoints>
-        <line-breakpoint enabled="true" type="kotlin-line">
-          <url>file://$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/AcessoRestRetrofitt.kt</url>
-          <line>43</line>
-          <properties />
-          <option name="timeStamp" value="10" />
-        </line-breakpoint>
-      </breakpoints>
-      <option name="time" value="11" />
+      <option name="time" value="13" />
     </breakpoint-manager>
   </component>
   <component name="debuggerHistoryManager">
@@ -3148,23 +3115,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/app/Instrumentation.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="234">
-          <caret line="1365" selection-start-line="1365" selection-end-line="1365" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/AcessoRest.kt">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="459">
-          <caret line="51" column="56" selection-start-line="51" selection-start-column="56" selection-end-line="51" selection-end-column="107" />
-          <folding>
-            <element signature="e#29#491#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/api/ApiService.kt">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
@@ -3226,10 +3176,27 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$USER_HOME$/Library/Android/sdk/sources/android-27/android/app/Instrumentation.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="234">
+          <caret line="1356" selection-start-line="1356" selection-end-line="1356" />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/AcessoRestRetrofitt.kt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="120">
-          <caret line="43" selection-start-line="43" selection-end-line="43" />
+        <state relative-caret-position="495">
+          <caret line="48" column="16" selection-start-line="48" selection-start-column="12" selection-end-line="48" selection-end-column="16" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/app/src/main/java/br/cubas/acessorest/AcessoRest.kt">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="332">
+          <caret line="52" column="62" selection-start-line="52" selection-start-column="62" selection-end-line="52" selection-end-column="62" />
+          <folding>
+            <element signature="e#29#503#0" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
