@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">AcessoRest</string>
-    <string name="title_activity_acesso_rest">AcessoRest</string>
-    <string name="title_activity_acesso_rest_retrofitt">AcessoRestRetrofitt</string>
+    <string name="app_name">Lista Filmes</string>
+    <string name="title_activity_lista_filmes">AcessoRest</string>
+    <string name="title_activity_acesso_lista_filmes">AcessoRestRetrofitt</string>
 </resources>

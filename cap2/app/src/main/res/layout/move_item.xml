@@ -18,8 +18,8 @@
             android:id="@+id/move_image"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            app:srcCompat="@mipmap/ic_launcher_round" />
-
+            android:adjustViewBounds="true"
+            app:srcCompat="@drawable/blade_runner" />
         <TextView
             android:id="@+id/movie_item_title"
             android:layout_width="match_parent"

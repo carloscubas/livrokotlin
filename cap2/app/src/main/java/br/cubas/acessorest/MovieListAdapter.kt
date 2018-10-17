@@ -7,7 +7,6 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import br.cubas.acessorest.models.Movie
-import com.koushikdutta.ion.Ion
 import kotlinx.android.synthetic.main.move_item.view.*
 
 class MovieListAdapter(private val movies: List<Movie>?,
@@ -38,12 +37,7 @@ class MovieListAdapter(private val movies: List<Movie>?,
             val image = itemView.move_image
             title.text = movie.Title
             type.text = movie.Type
-            Ion.with(image)
-                    .centerCrop()
-                    .placeholder(R.drawable.place_holder)
-                    .error(R.drawable.error)
-                    .animateIn(R.anim.fade_in)
-                    .load(movie.Poster)
+            image.setImageResource(movie.Poster)
         }
     }
 
