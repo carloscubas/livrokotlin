@@ -12,11 +12,6 @@ import kotlinx.android.synthetic.main.move_item.view.*
 class MovieListAdapter(private val movies: List<Movie>?,
                        private val context: Context) : Adapter<MovieListAdapter.ViewHolder>() {
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
-        val movie = movies?.get(position)
-        movie?.let { holder.bindView(it) }
-    }
-
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): ViewHolder {
         val view = LayoutInflater.from(context).inflate(R.layout.move_item, parent, false)
         return ViewHolder(view)
@@ -29,6 +24,11 @@ class MovieListAdapter(private val movies: List<Movie>?,
         return 0
     }
 
+    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+        val movie = movies?.get(position)
+        movie?.let { holder.bindView(it) }
+    }
+
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
 
         fun bindView(movie: Movie) {
@@ -39,7 +39,7 @@ class MovieListAdapter(private val movies: List<Movie>?,
             type.text = movie.Type
             image.setImageResource(movie.Poster)
         }
-    }
 
+    }
 }
 

@@ -2,20 +2,18 @@ package br.cubas.acessorest
 
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
-import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.StaggeredGridLayoutManager
 import br.cubas.acessorest.models.Movie
 import kotlinx.android.synthetic.main.activity_acesso_rest.*
 
 class ListaFilmes : AppCompatActivity() {
 
-    var recyclerView: RecyclerView?= null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_acesso_rest)
 
-        recyclerView = movie_list_recyclerview
+        var recyclerView = movie_list_recyclerview
+        //val layoutManager = LinearLayoutManager(this)
         val layoutManager = StaggeredGridLayoutManager(2, StaggeredGridLayoutManager.VERTICAL)
         recyclerView?.layoutManager = layoutManager
         recyclerView?.adapter = MovieListAdapter(listaFilmes(), this)
