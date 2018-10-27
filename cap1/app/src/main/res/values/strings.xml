@@ -1,6 +1,0 @@
-<resources>
-    <string name="app_name">monitoramento</string>
-    <string name="title_activity_principal">PrincipalActivity</string>
-    <string name="title_activity_main">MainActivity</string>
-    <string name="title_activity_sms">SmsActivity</string>
-</resources>
