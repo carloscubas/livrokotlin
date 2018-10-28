@@ -1,7 +1,6 @@
 package br.cubas.acessorest
 
 import android.content.Context
-import android.net.Uri
 import android.os.AsyncTask
 import android.os.Bundle
 import android.support.v7.app.AppCompatActivity
@@ -9,6 +8,7 @@ import android.support.v7.widget.RecyclerView
 import android.support.v7.widget.StaggeredGridLayoutManager
 import android.view.View
 import android.widget.ProgressBar
+import br.cubas.acessorest.models.Movie
 import br.cubas.acessorest.utils.Constants.API_KEY
 import br.cubas.acessorest.utils.Constants.URL_SERVIDOR
 import br.cubas.acessorest.utils.Util
@@ -35,7 +35,7 @@ class AcessoRest : AppCompatActivity() {
         buscaFilmes(this).execute();
     }
 
-    inner class buscaFilmes(context: Context) : AsyncTask<Void, Void, String>() {
+    inner class buscaFilmes(context: Context) : AsyncTask<Void, Void,  List<Movie>>() {
 
         private val context: Context
 
@@ -48,19 +48,15 @@ class AcessoRest : AppCompatActivity() {
             progressBarWaiting?.visibility = View.VISIBLE
         }
 
-        override fun doInBackground(vararg params: Void?): String? {
-            val url =
-                    Uri.parse( "$URL_SERVIDOR/?apikey=$API_KEY&type=movie&r=json&s=brazil&page=1").toString()
-            val contents = Util.acessar(url)
-            return contents
+        override fun doInBackground(vararg params: Void?): List<Movie>? {
+            var listaFilmes = Util.parse("$URL_SERVIDOR/?apikey=$API_KEY&type=movie&r=json&s=brazil&page=1")
+            return listaFilmes
         }
 
-        override fun onPostExecute(result: String?) {
+        override fun onPostExecute(result: List<Movie>?) {
             super.onPostExecute(result)
-            var listMovies = Util.movieConverter(result)
-            recyclerView?.adapter = MovieListAdapter(listMovies, context)
+            recyclerView?.adapter = MovieListAdapter(result, context)
             progressBarWaiting?.visibility = View.INVISIBLE
         }
     }
-
 }
