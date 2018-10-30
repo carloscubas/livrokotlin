@@ -9,8 +9,8 @@ import java.util.*
 
 object Util {
 
-    fun parse(name: String?): List<Movie>?{
-        val contents = URL(name).readText()
+    fun parse(path: String?): List<Movie>?{
+        val contents = URL(path).readText()
         val movieData = contents?.let { Klaxon().parse<MovieData>(it) }
         return movieData?.Search
     }
